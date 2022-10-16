@@ -9,9 +9,9 @@ Saad Malik
 
 ## Installation
 
-    1. Upload posthog-for-wp-posthog-com-integration to the /wp-content/plugins/ directory
-    2. Activate the plugin through the 'Plugins' menu in WordPress
-    3. Edit the plugin settings by clicking "PostHog Settings" on the settings navbar
+  1. Upload posthog-for-wp-posthog-com-integration to the /wp-content/plugins/ directory
+  2. Activate the plugin through the 'Plugins' menu in WordPress
+  3. Edit the plugin settings by clicking "PostHog Settings" on the settings navbar
 
 ## FAQ
 
