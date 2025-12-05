@@ -1,0 +1,46 @@
+# SVN directory for WordPress.org plugin repository
+svn/
+
+# Development and deployment scripts (for maintainer use only)
+deploy-to-svn.ps1
+svn-initial-setup.ps1
+SVN-SETUP-GUIDE.md
+SVN-SETUP-COMMANDS.ps1
+
+# WordPress
+.htaccess
+wp-config.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Node modules (if you add build tools later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
