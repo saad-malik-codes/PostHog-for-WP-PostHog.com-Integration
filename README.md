@@ -53,19 +53,8 @@ PostHog-for-WP-PostHog.com-Integration/
 ├── README.md                      # GitHub readme (this file)
 ├── LICENSE.txt                    # GPL v2 license
 ├── uninstall.php                  # Uninstall script
-├── assets/                        # Plugin assets
-├── svn/                           # SVN checkout (gitignored)
-├── deploy-to-svn.ps1             # Deployment script
-├── svn-initial-setup.ps1         # Initial SVN setup
-└── SVN-SETUP-GUIDE.md            # Detailed SVN guide
+└── assets/                        # Plugin assets (icons, banners, screenshots)
 ```
-
-### For Contributors
-
-See [SVN-SETUP-GUIDE.md](SVN-SETUP-GUIDE.md) for detailed instructions on:
-- Setting up your development environment
-- Making changes and testing
-- Deploying updates to WordPress.org
 
 ## Requirements
 
