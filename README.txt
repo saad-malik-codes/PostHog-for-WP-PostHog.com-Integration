@@ -1,6 +1,6 @@
 === PostHog for WP - PostHog.com Integration ===
 Contributors: Saad Malik
-Tags: PostHog, posthog.com, Post Hog, PostHog integration, PostHog WordPress integration, analytics
+Tags: PostHog, posthog.com, Post Hog, PostHog integration, PostHog WordPress integration
 Requires at least: 5.0
 Tested up to: 6.9
 Stable tag: 1.4.0
