@@ -10,7 +10,7 @@ PostHog is an open-source product analytics platform that helps you understand u
 - ✅ Easy setup - just paste your PostHog snippet code
 - ✅ Enable/disable tracking with one click
 - ✅ Lightweight and fast
-- ✅ Compatible with WordPress 6.7+
+- ✅ Compatible with WordPress 7.0+
 - ✅ No coding required
 
 ## Installation
@@ -74,6 +74,10 @@ Yes, the PostHog snippet will track all pages including WooCommerce pages. WooCo
 Yes, the snippet is added to the HTML output and works with most caching solutions.
 
 ## Changelog
+
+### 1.4.1 (2026-05-27)
+- ✅ Updated: WordPress 7.0 compatibility metadata
+- ✅ Fixed: i18n text domain now matches plugin slug for Plugin Check
 
 ### 1.4.0 (2025-12-05)
 - ✅ Updated: WordPress 6.9 compatibility

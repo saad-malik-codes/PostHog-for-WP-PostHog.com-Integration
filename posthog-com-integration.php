@@ -3,14 +3,14 @@
  * Plugin Name:       PostHog for WP - PostHog.com Integration
  * Plugin URI:        https://saad.codes/plugins/posthog-for-wp-posthog-com-integration/
  * Description:       Simple, lightweight solution for inserting your PostHog.com Snippet code to your WordPress website.
- * Version:           1.4.0
+ * Version:           1.4.1
  * Requires at least: 5.0
  * Requires PHP:      7.4
  * Author:            Saad Malik
  * Author URI:        https://saad.codes/
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       posthog-for-wp-posthog-com-integration
+ * Text Domain:       connect-wp-posthog-com-integration
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -42,7 +42,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 		$settings_link = sprintf(
 			'<a href="%s">%s</a>',
 			esc_url( admin_url( 'options-general.php?page=posthog-settings' ) ),
-			esc_html__( 'Settings', 'posthog-for-wp-posthog-com-integration' )
+			esc_html__( 'Settings', 'connect-wp-posthog-com-integration' )
 		);
 		array_unshift( $links, $settings_link );
 		return $links;
@@ -88,7 +88,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 			add_settings_error(
 				'ph_snippet_code',
 				'ph_snippet_code_empty',
-				esc_html__( 'The PostHog snippet code cannot be empty. Please paste your snippet code.', 'posthog-for-wp-posthog-com-integration' ),
+				esc_html__( 'The PostHog snippet code cannot be empty. Please paste your snippet code.', 'connect-wp-posthog-com-integration' ),
 				'error'
 			);
 			return '';
@@ -99,7 +99,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 			add_settings_error(
 				'ph_snippet_code',
 				'ph_snippet_code_invalid',
-				esc_html__( 'This does not appear to be a valid PostHog snippet. Please check and try again.', 'posthog-for-wp-posthog-com-integration' ),
+				esc_html__( 'This does not appear to be a valid PostHog snippet. Please check and try again.', 'connect-wp-posthog-com-integration' ),
 				'warning'
 			);
 		}
@@ -136,8 +136,8 @@ class PostHogforWPPostHogIntegrationPlugin {
 	 */
 	public function add_menu() {
 		add_options_page(
-			esc_html__( 'PostHog Settings', 'posthog-for-wp-posthog-com-integration' ),
-			esc_html__( 'PostHog Settings', 'posthog-for-wp-posthog-com-integration' ),
+			esc_html__( 'PostHog Settings', 'connect-wp-posthog-com-integration' ),
+			esc_html__( 'PostHog Settings', 'connect-wp-posthog-com-integration' ),
 			'manage_options', // Proper capability check
 			'posthog-settings',
 			array( $this, 'settings_page' )
@@ -174,7 +174,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 	public function settings_page() {
 		// Check user capabilities
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'posthog-for-wp-posthog-com-integration' ) );
+			wp_die( esc_html__( 'You do not have sufficient permissions to access this page.', 'connect-wp-posthog-com-integration' ) );
 		}
 		?>
 		<div class="wrap">
@@ -185,7 +185,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 				echo wp_kses_post(
 					sprintf(
 						/* translators: %s: URL to PostHog settings page */
-						__( 'Copy your PostHog snippet code from "Project" &rarr; "Settings" and paste it below.<br/>You can also visit the <a href="%s" target="_blank" rel="noopener noreferrer">PostHog settings page</a>.', 'posthog-for-wp-posthog-com-integration' ),
+						__( 'Copy your PostHog snippet code from "Project" &rarr; "Settings" and paste it below.<br/>You can also visit the <a href="%s" target="_blank" rel="noopener noreferrer">PostHog settings page</a>.', 'connect-wp-posthog-com-integration' ),
 						'https://app.posthog.com/ingestion/web'
 					)
 				);
@@ -202,13 +202,13 @@ class PostHogforWPPostHogIntegrationPlugin {
 					<tr>
 						<th scope="row">
 							<label for="ph_plugin_enabled">
-								<?php esc_html_e( 'Activate Code Snippet?', 'posthog-for-wp-posthog-com-integration' ); ?>
+								<?php esc_html_e( 'Activate Code Snippet?', 'connect-wp-posthog-com-integration' ); ?>
 							</label>
 						</th>
 						<td>
 							<fieldset>
 								<legend class="screen-reader-text">
-									<span><?php esc_html_e( 'Activate Code Snippet?', 'posthog-for-wp-posthog-com-integration' ); ?></span>
+									<span><?php esc_html_e( 'Activate Code Snippet?', 'connect-wp-posthog-com-integration' ); ?></span>
 								</legend>
 								<label>
 									<input 
@@ -217,7 +217,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 										value="1" 
 										<?php checked( get_option( 'ph_plugin_enabled' ), 1 ); ?>
 									/>
-									<?php esc_html_e( 'Yes', 'posthog-for-wp-posthog-com-integration' ); ?>
+									<?php esc_html_e( 'Yes', 'connect-wp-posthog-com-integration' ); ?>
 								</label>
 								<br>
 								<label>
@@ -227,7 +227,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 										value="0" 
 										<?php checked( get_option( 'ph_plugin_enabled' ), 0 ); ?>
 									/>
-									<?php esc_html_e( 'No', 'posthog-for-wp-posthog-com-integration' ); ?>
+									<?php esc_html_e( 'No', 'connect-wp-posthog-com-integration' ); ?>
 								</label>
 							</fieldset>
 						</td>
@@ -236,7 +236,7 @@ class PostHogforWPPostHogIntegrationPlugin {
 					<tr>
 						<th scope="row">
 							<label for="ph_snippet_code">
-								<?php esc_html_e( 'PostHog Snippet Code', 'posthog-for-wp-posthog-com-integration' ); ?>
+								<?php esc_html_e( 'PostHog Snippet Code', 'connect-wp-posthog-com-integration' ); ?>
 							</label>
 						</th>
 						<td>
@@ -248,13 +248,13 @@ class PostHogforWPPostHogIntegrationPlugin {
 								aria-describedby="snippet-code-description"
 							><?php echo esc_textarea( get_option( 'ph_snippet_code' ) ); ?></textarea>
 							<p class="description" id="snippet-code-description">
-								<?php esc_html_e( 'Paste your complete PostHog JavaScript snippet here.', 'posthog-for-wp-posthog-com-integration' ); ?>
+								<?php esc_html_e( 'Paste your complete PostHog JavaScript snippet here.', 'connect-wp-posthog-com-integration' ); ?>
 							</p>
 						</td>
 					</tr>
 				</table>
 
-				<?php submit_button( esc_html__( 'Save Settings', 'posthog-for-wp-posthog-com-integration' ) ); ?>
+				<?php submit_button( esc_html__( 'Save Settings', 'connect-wp-posthog-com-integration' ) ); ?>
 			</form>
 		</div>
 		<?php
